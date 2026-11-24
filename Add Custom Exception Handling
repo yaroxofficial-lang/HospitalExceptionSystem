@@ -1,0 +1,7 @@
+  public void registerPatient(String name, int age)
+            throws InvalidAgeException {
+
+        if (age <= 0 || age > 120) {
+            throw new InvalidAgeException(
+                    "Invalid age! Age must be between 1 and 120."
+            );
