@@ -1,0 +1,26 @@
+try {
+            System.out.println("MUKONO HOSPITAL REGISTRATION");
+
+            System.out.print("Enter patient name: ");
+            String name = input.nextLine();
+
+            System.out.print("Enter patient age: ");
+            int age = Integer.parseInt(input.nextLine());
+
+            registration.registerPatient(name, age);
+
+        } catch (NumberFormatException e) {
+
+            System.out.println("Error: Please enter a valid number for age.");
+
+        } catch (PatientRegistration.InvalidAgeException e) {
+
+            System.out.println("Registration failed: " + e.getMessage());
+
+        } finally {
+
+            System.out.println("Patient registration process completed.");
+            input.close();
+        }
+    }
+}
